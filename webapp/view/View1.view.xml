@@ -1,0 +1,17 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:u="sap.ui.unified"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        	<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+            fileType="csv"
+            typeMissmatch="handleTypeMissmatch"
+			tooltip="Upload your file to the local server"
+			change="handleUploadComplete"/>
+            <Button press="postEmptyCall"></Button>
+            <Button text="metadata" press="getMetadatatest"></Button>
+    </Page>
+</mvc:View>
